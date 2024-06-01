@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SushiContainer from "./SushiContainer";
 import Table from "./Table";
+import CustomerWallet from "./CustomerWallet";
 
 const API = "http://localhost:3001/sushis";
 
@@ -31,10 +32,15 @@ function App() {
     }
   }
 
+    function addMoney(amount){
+      setMoney((prevMoney) => prevMoney + amount);
+    }
+
   return (
     <div className="app">
       <SushiContainer sushiList={sushiList} onEatSushi={handleEatSushi} />
       <Table plates={plates} remainingMoney={money} />
+      <CustomerWallet addMoney={addMoney} />
     </div>
   );
 }
