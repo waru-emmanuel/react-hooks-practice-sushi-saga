@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Wallet({ addMoney }) {
+function CustomerWallet({ addMoney }) {
   const [amount, setAmount] = useState("");
 
   const handleChange = (event) => {
@@ -33,4 +33,4 @@ function Wallet({ addMoney }) {
   );
 }
 
-export default Wallet;
+export default CustomerWallet;
